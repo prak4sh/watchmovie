@@ -1,0 +1,29 @@
+.pagination-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .prev-button {
+    margin-right: auto; /* Pushes the Previous button to the left */
+  }
+  
+  .next-button {
+    margin-left: auto; /* Pushes the Next button to the right */
+    padding-left: 10;
+  }
+  

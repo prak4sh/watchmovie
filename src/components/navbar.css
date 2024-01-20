@@ -1,0 +1,21 @@
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust the transparency as needed */
+    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  }
+
+  .navbar-brand {
+    color: #fff;
+  }
+
+  .navbar-nav .nav-link {
+    color: #fff;
+  }
