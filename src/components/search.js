@@ -34,10 +34,10 @@ const Search = ({path}) => {
                     <button className="btn btn-outline-warning my-sm-0" type="button" onClick={fetchData}><i className="fa fa-search"></i></button>
                 </div>
                 </div>
-                
-            </div>        
+            </div>       
             </div>
             <div className='row'>
+
             {   path === "home" && 
                 movies.map((movie, index) => (
                     <Result key={index} title={movie.Title} imageUrl={movie.Poster} year={movie.Year} movieId={movie.imdbID} type={movie.Type}/>
@@ -50,6 +50,9 @@ const Search = ({path}) => {
                     <button className="button prev-button" onClick={event=>fetchData(setPage(page + 1))}>Next Page</button>
                 </div>
             }
+            <div className='text-center text-info my-3'>
+                <p><u>Use Brave Browser for better experience.</u></p> 
+            </div>
         </>
     );
 }
