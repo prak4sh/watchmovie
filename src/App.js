@@ -3,10 +3,12 @@ import Search from './components/search';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React from 'react';
 import Details from './components/details'
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
     <>
+      <Analytics />
       <div className="container justify-content-center">
         <BrowserRouter>
           <Routes>
