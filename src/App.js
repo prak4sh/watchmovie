@@ -4,13 +4,11 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import React from 'react';
 import Details from './components/details'
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
     <>
       <Analytics />
-      <SpeedInsights/>
       <div className="container justify-content-center">
         <BrowserRouter>
           <Routes>
