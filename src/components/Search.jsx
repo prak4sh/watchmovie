@@ -27,14 +27,14 @@ const Search = () => {
   };
   return (
     <>
-      <div className="text-2xl font-medium py-10 text-slate-900 flex justify-center item-center">
+      <div className="text-5xl font-semibold py-10 text-green-600 font-outline-2 flex justify-center item-center">
         Search Movies or Series
       </div>
       <div className="flex justify-center">
         <div className="flex justify-center items-stretch md:w-2/4 w-full rounded-full">
           <input
             type="text"
-            className="px-4 py-3 border shadow border-slate-900 w-full rounded-l-full focus:outline-none focus:border-blue-500"
+            className="px-4 py-3 border shadow border-green-900 w-full rounded-l-full focus:outline-none focus:border-blue-500"
             placeholder="Search movies or series..."
             value={searchText}
             onChange={handleOnChange}
@@ -43,13 +43,13 @@ const Search = () => {
           <button
             type="button"
             onClick={fetchData}
-            className="py-2 px-5 bg-slate-800 text-white rounded-r-full hover:bg-slate-900 focus:outline-none"
+            className="py-2 px-5 bg-green-800 text-white rounded-r-full hover:bg-green-900 focus:outline-none"
           >
             Search
           </button>
         </div>
       </div>
-      <div className="pt-8 grid grid-cols-2 md:grid-cols-5 gap-4 h-96">
+      <div className="pt-8 grid grid-cols-2 md:grid-cols-5 gap-4">
       {movies.map((movie, index) => (
           <div className="">
             <Result

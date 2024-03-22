@@ -8,8 +8,9 @@ const Home = () => {
         <>
           <div className="bg-slate-200 min-h-screen">
             <Navbar />
-            <div className="items-center h-96 m-16">
+            <div className="items-center md:m-8 m-4">
               <Search />
+              
             </div>
             <Footer />
           </div>
