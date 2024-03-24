@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <>
       <div className="bottom-0">
-        <div className="flex justify-center w-full bg-slate-900 h-20">
-          <div className="text-lg text-slate-200 mt-4">
-            Build with &#10084; by &lt;prakash/&gt;
+        <div className="flex flex-col items-center w-full bg-slate-900 h-20">
+          <div className="text-md text-slate-200 mt-6">
+            Build with <span className="text-lg">&#10084;</span> by prakash
           </div>
         </div>
       </div>

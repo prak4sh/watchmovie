@@ -5,7 +5,8 @@ const Navbar = () => {
     <div className="relative">
     <nav className="bg-slate-900 w-full py-4">
           <div className='text-white flex px-5'>
-              <div className='mx-4 py-2 hover:text-green-800'><a href="/">Home</a></div>
+              <img src="/logo.png" height="64" width="64" alt="" />
+              <div className='mx-4 py-2 hover:text-green-800 '><a href="/">Home</a></div>
               <div className='mx-4 py-2 hover:text-green-800'><a href="#">Top Rated</a></div>
               <div className='mx-4 py-2 hover:text-green-800'><a href="#">Latest</a></div>
               {/* <div className='ml-4 right-4 absolute flex justify-around'>
