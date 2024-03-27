@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Result from "./Result";
 import { Pagination } from '@mui/material'
 
@@ -8,7 +8,6 @@ const Search = () => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(false)
   const [total, setTotal] = useState(0)
-  // const navigate = useNavigate()
   const omdb_api = import.meta.env.VITE_APP_OMDB_API;
   // const tmdb_api = import.meta.env.VITE_APP_TMDB_API;
   const handleOnChange = (event) => {
@@ -31,7 +30,6 @@ const Search = () => {
       setTotal(Math.floor(data.totalResults / 10));
     }
   };
-
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
