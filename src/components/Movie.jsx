@@ -8,9 +8,9 @@ const Movie = () => {
   const { movieId } = useParams();
   let iframeUrl = "";
   if (type === "movie") {
-    iframeUrl = "https://vidsrc.to/embed/movie/" + movieId;
+    iframeUrl = "https://vidsrc.cc/v2/embed/movie/" + movieId;
   } else {
-    iframeUrl = "https://vidsrc.to/embed/tv/" + movieId;
+    iframeUrl = "https://vidsrc.cc/v2/embed/tv/" + movieId;
   }
   console.log(useParams());
   console.log(type);

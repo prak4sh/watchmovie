@@ -6,8 +6,10 @@ const Search = () => {
   const [searchText, setSearchText] = useState("");
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false)
-  const [total, setTotal] = useState(0)
+  const [hasMore, setHasMore] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
+  const [total, setTotal] = useState(1);
+  // const navigate = useNavigate()
   const omdb_api = import.meta.env.VITE_APP_OMDB_API;
   // const tmdb_api = import.meta.env.VITE_APP_TMDB_API;
   const handleOnChange = (event) => {
@@ -16,8 +18,7 @@ const Search = () => {
 
   const fetchData = async (event, param) => {
     console.log(page)
-    param ? setPage(param): page
-    console.log(page)
+    console.log(param)
     const omdbUrl = `https://www.omdbapi.com/?s=${searchText.trim()}&apikey=${omdb_api}&page=${page}`;
     console.log(omdbUrl)
     // const tmdbUrl = `https://api.themoviedb.org/3/search/movie?query=${searchText.trim()}&api_key=${tmdb_api}`;
@@ -27,15 +28,17 @@ const Search = () => {
       console.log(data);
       setMovies(data.Search || []);
       movies.length === 10 ? setHasMore(true): setHasMore(false)
-      setTotal(Math.floor(data.totalResults / 10));
+      setPage((prePage) => prePage + 1)
     }
   };
 
+ 
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       fetchData();
     }
   };
+
   return (
     <>
       <div className="text-5xl font-semibold py-10 text-green-700 font-outline-2 flex justify-center item-center">
@@ -73,11 +76,11 @@ const Search = () => {
             />
         ))}
       </div>
-      <div className="flex justify-center m-8">
-        { hasMore &&
-        <Pagination count={total} page={page} shape="rounded" variant="outlined" color="standard" onChange={fetchData}/>
-      }
-        </div>
+      {/* <div className="flex justify-center p-12">
+          { 
+          <Pagination color="primary" shape="rounded" count={10} onChange={fetchData()}></Pagination>
+          }
+        </div> */}
 
     </>
   );
